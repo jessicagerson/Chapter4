@@ -4,6 +4,8 @@ public class Student
     private int idNumber;
     private String name;
     private Student bestFriend;
+    private Pet pete;
+    private Hat h;
 
     /**
      * Constructor for objects of class Student
