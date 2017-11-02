@@ -16,6 +16,7 @@ public class Student
     String name;
     int test1;
     int test2;
+    int average;
     Scanner scan = new Scanner(System.in);
     
     
@@ -24,38 +25,35 @@ public class Student
     public Student(String studentName)
     {
         //add body of constructor
+        name = studentName;
+        
     }
     //-----------------------------------------------
     //inputGrades: prompt for and read in student's grades for test1 and test2.
-    //Use name in prompts, e.g., "Enter's Joe's score for test1".
-    //-----------------------------------------------
+
     public void inputGrades()
     {
-        System.out.println("Enter Parker's score for test1.");
+        System.out.println("Enter "  + name + "'s" + " score for test1.");
         test1 = scan.nextInt();
-        System.out.println("Enter Parker's score for test2.");
+        System.out.println("Enter " + name + "'s" + " score for test2.");
         test2 = scan.nextInt();
+        
 
     }
-    //-----------------------------------------------
-    //getAverage: compute and return the student's test average
-    //-----------------------------------------------
-    //add header for getAverage
-    public void getAverage(){
-        //add body of getAverage
+    public String getAverage(){
+        average = ((test1 + test2) / 2);
+        return "" + average;
     }
-    //-----------------------------------------------
-    //getName: return the student's name
-    //-----------------------------------------------
-    //add header for getName
+    public String getName()
     {
-        //add body of getName
+        return this.name;
     }
-    //-----------------------------------------------
-    //printName: print the student's name
-    //-----------------------------------------------
-    //add header for printName
+    public void printName()
     {
-        //add body of printName
+        System.out.println(name);
+    }
+        public void summary(){
+        System.out.println( "Student: " + this.name + " Test1: " + this.test1 + " Test2: " + this.test2 + " Average: " + this.average);
+        
     }
 }
