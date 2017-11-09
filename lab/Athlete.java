@@ -15,5 +15,12 @@ public class Athlete
     public String toString(){
         return (name + " who is " + age + " years old.");
     }
-
+    public boolean equals(Athlete other) {
+        if (this.name.equals(other.name) && this.age == other.age){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

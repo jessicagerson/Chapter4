@@ -12,6 +12,10 @@ public class SoccerDriver
         t.addAthlete(0, parker);
         Athlete jess = new Athlete("Jess", 17);
         t.addAthlete(1, jess);
+        
+        System.out.println(parker.equals(jess));
+        System.out.println(jess.equals(jess));
+        
         Athlete sam = new Athlete("Sam", 17);
         t.addAthlete(2, sam);
         Athlete maddie = new Athlete("Maddie", 14);

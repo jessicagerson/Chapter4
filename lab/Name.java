@@ -30,7 +30,7 @@ public class Name
     public String lastFirstMiddle(){
         return (lastName + ", " + firstName + " " + firstName);
     }
-    public boolean equals(Name otherName){
+    public boolean equalsIgnoreCase(Name otherName){
         if ((firstName.equalsIgnoreCase(otherName.firstName)) && (middleName.equalsIgnoreCase(otherName.middleName)) && (lastName.equalsIgnoreCase(otherName.lastName))){
             return true;
         }
@@ -38,13 +38,22 @@ public class Name
             return false;
         }
     }
-    //public String initials(){
-        //return (myName.toUpperCase());
-    //}
-    //public int length(){
-        //return (myName.length());
-    //}
+    public String initials(){
+        String initials = firstName.substring(0,1) + middleName.substring(0,1) + lastName.substring(0,1);
+        return initials.toUpperCase();
+        
+    }
+    public int Length(){
+        int totalLength = firstName.length();
+        totalLength += middleName.length();
+        totalLength += lastName.length();
+        return totalLength;
+    }
+    public String toString(){
+        return "This person's name is " + firstName + " " + middleName + " " + lastName ;
+    }
 }
+
 //Write a class Name that stores a person's first, middle, and last names and provides the following methods:
 //public Name(String first, String middle, String last)—constructor. The name should be stored in the case given; don't convert to all upper or lower case.
 //public String getFirst()—returns the first name
